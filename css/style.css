@@ -25,7 +25,7 @@ header {
 .cloud {
     position: absolute;
     width: 100%;
-    animation: cloud 50s;
+    animation: cloud 50s linear;
     transform: translateY(-200px);
 }
 
