@@ -13,7 +13,12 @@ header {
     z-index: 3;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(180deg, #568dfc, #ccd6f9);
+    /* background: linear-gradient(180deg, #568dfc, #ccd6f9); */
+    background: linear-gradient(180deg, rgba(86, 141, 252, 1) 0%, rgba(204, 214, 249, 1) 90%, rgba(204, 214, 249, 0) 100%);
+}
+
+.hed {
+    background: #ccd6f9;
 }
 
 .cloud {
