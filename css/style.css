@@ -209,7 +209,7 @@ li>a:hover~.description {
 
 .start_surv {
     width: 100%;
-    height: 300vh;
+    height: 355vh;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -328,11 +328,16 @@ li>a:hover~.description {
 
 .kirka,
 .end_img {
-    width: 450px;
+    width: 400px;
 }
 
 .nether_img {
     width: 400px;
+}
+
+.end_city_img {
+    height: 300px;
+    margin: 0 auto;
 }
 
 .nether {
@@ -363,6 +368,21 @@ li>a:hover~.description {
 }
 
 .end.activ {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.end_city {
+    width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transform: translateX(200px);
+    opacity: 0;
+    transition: .8s linear;
+}
+
+.end_city.activ {
     transform: translate(0, 0);
     opacity: 1;
 }
