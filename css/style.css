@@ -15,6 +15,7 @@ header {
     height: 100vh;
     /* background: linear-gradient(180deg, #568dfc, #ccd6f9); */
     background: linear-gradient(180deg, rgba(86, 141, 252, 1) 0%, rgba(204, 214, 249, 1) 90%, rgba(204, 214, 249, 0) 100%);
+    overflow: hidden;
 }
 
 .hed {
@@ -24,6 +25,17 @@ header {
 .cloud {
     position: absolute;
     width: 100%;
+    animation: cloud 40s linear;
+}
+
+@keyframes cloud {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+        transform: translateY(-200px);
+    }
 }
 
 .sun {
