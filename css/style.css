@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* overflow-y: hidden; */
+}
+
+header {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #568dfc, #ccd6f9);
+}
+
+.cloud {
+    position: absolute;
+    width: 100%;
+}
+
+.sun {
+    top: 45%;
+    left: 47%;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgb(255, 247, 226);
+    animation: sun 90s linear infinite;
+    box-shadow: 0px 0px 50px 14px rgba(255, 255, 255, 0.73);
+}
+
+.logo {
+    position: absolute;
+    top: 35%;
+    left: 23%;
+    width: 55%;
+    transform: translate(0, 55%);
+    opacity: 0;
+    transition: 2s linear;
+}
+
+.logo.activ {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+nav {
+    position: fixed;
+    top: 30%;
+    z-index: 2;
+}
+
+.desc {
+    user-select: none;
+    position: relative;
+    z-index: 2;
+    width: max-content;
+    top: 80%;
+    left: calc(50% - 408px / 2);
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.down,
+.adv_time_next {
+    position: relative;
+    z-index: 5;
+    top: 80%;
+    left: calc(50% - 59px / 2);
+}
+
+.down>i,
+.adv_time_next>i {
+    height: 10px;
+    color: white;
+    transition: color .5s;
+    animation: next 1s ease-in-out infinite;
+}
+
+.down>i:hover,
+.adv_time_next>i:hover {
+    color: rgb(0, 145, 24);
+}
+
+.about {
+    height: 100vh;
+    width: 100%;
+    background: url(../img/one_block.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+li>a {
+    width: max-content;
+    padding: 13px 10px;
+    text-decoration: none;
+    background: #a2bf40;
+    border-radius: 50%;
+}
+
+.description {
+    position: relative;
+    z-index: -1;
+    left: -15%;
+    padding: 13px 10px 13px 30px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background: #a2bf40;
+    transform: translate(50px, 0);
+    transition: .3s ease;
+    opacity: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+li>a:hover~.description {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.ico {
+    margin-bottom: -8px;
+    width: 25px;
+}
+
+.information {
+    position: relative;
+    top: 25%;
+    text-align: center;
+    margin: 0 auto;
+    width: 850px;
+    color: #fff;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.638);
+    border-radius: 5px;
+    transform: translate(0, 15%);
+    opacity: 0;
+    transition: 0.8s linear;
+}
+
+.information.activ {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.title_info {
+    font-family: 'Press Start 2P', cursive;
+    padding-bottom: 10px;
+}
+
+.adv_time {
+    user-select: none;
+    position: relative;
+    z-index: 2;
+    width: max-content;
+    top: 30%;
+    left: calc(50% - 408px / 2);
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.adv_time_next {
+    top: 32%;
+}
+
+@keyframes next {
+    50% {
+        transform: translate(0, 30px);
+    }
+}
+
+@keyframes sun {
+    100% {
+        background: #fff;
+        transform: translateY(-450px);
+    }
+}
+
+.start_surv {
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.start_surv h1 {
+    user-select: none;
+    text-align: center;
+    padding: 25px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.wood {
+    width: 1000px;
+    height: 50vh;
+    padding: 25px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transform: translateX(200px);
+    opacity: 0;
+    transition: .8s linear;
+}
+
+.info_win {
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-row-gap: 20px;
+}
+
+.numb_info {
+    user-select: none;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    padding: 18px 9px 1px;
+    text-align: center;
+    height: 35px;
+    width: 35px;
+    background: #50ae24;
+    transition: .3s ease;
+    margin-bottom: 20px;
+    box-shadow: inset -5px -5px 0px -1px #30A521;
+}
+
+.title_info {
+    user-select: none;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+    user-select: none;
+}
+
+.item {
+    width: 110px;
+    height: 110px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    top: 27px;
+    left: 8px;
+    grid-gap: 4px;
+}
+
+.item>img {
+    width: 35px;
+    height: 35px;
+}
+
+.craft {
+    margin: 0 auto;
+    width: 261px;
+    height: 147px;
+    background: url(../img/table_interface.jpg);
+}
+
+.learning_img {
+    position: relative;
+    top: -46px;
+    left: 209px;
+    width: 40px;
+    height: 40px;
+}
+
+.wood.activ {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.but_next {
+    user-select: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    position: relative;
+    top: 14px;
+    left: 43%;
+    width: 100px;
+    height: 50px;
+    background: #50ae24;
+    box-shadow: inset -5px -5px 0px -1px #30A521;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.but_next:active {
+    box-shadow: inset -0px -0px 0px -1px #30A521;
+}
+
+.mine {
+    width: 1000px;
+    height: 50vh;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: .8s linear;
+}
+
+.mine.activ{
+    transform: translate(0,0);
+    opacity: 1;
+}
+.nether{
+    width: 1000px;
+    height: 50vh;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transform: translateX(200px);
+    opacity: 0;
+    transition: .8s linear;
+}
+.nether.activ{
+    transform: translate(0,0);
+    opacity: 1;
+}
+.end{
+    width: 1000px;
+    height: 50vh;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transform: translateX(200px);
+    opacity: 0;
+    transition: .8s linear;
+}
+.end.activ{
+    transform: translate(0,0);
+    opacity: 1;
+}
