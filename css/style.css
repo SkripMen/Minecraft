@@ -416,7 +416,7 @@ li>a:hover~.description {
 }
 
 .realms h3 {
-    margin-top: 50px;
+    margin-top: 8%;
     user-select: none;
     text-transform: uppercase;
     font-family: 'Press Start 2P', cursive;
