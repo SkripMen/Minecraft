@@ -356,15 +356,14 @@ li>a:hover~.description {
 }
 
 .menu_buy {
-    padding-top: 30px;
+    padding: 30px 2%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 2%;
     background: #fff;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    width: 100%;
     height: 100vh;
     opacity: 0;
     transform: translateY(100vh);
