@@ -384,7 +384,7 @@ li>a:hover~.description {
     color: black;
     margin: 0 auto;
     height: 30vh;
-    width: 250px;
+    width: 100%;
     background: rgb(225, 225, 225);
     user-select: none;
     text-transform: uppercase;
