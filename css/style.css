@@ -5,7 +5,7 @@
 
 html {
     scroll-behavior: smooth;
-    /* overflow-y: hidden; */
+    /* overflow-x: hidden; */
 }
 
 header {
@@ -13,7 +13,6 @@ header {
     z-index: 3;
     width: 100%;
     height: 100vh;
-    /* background: linear-gradient(180deg, #568dfc, #ccd6f9); */
     background: linear-gradient(180deg, rgba(86, 141, 252, 1) 0%, rgba(204, 214, 249, 1) 90%, rgba(204, 214, 249, 0) 100%);
     overflow: hidden;
 }
@@ -128,7 +127,7 @@ li>a {
 
 .description {
     position: relative;
-    z-index: -1;
+    z-index: -19999;
     left: -10%;
     padding: 13px 10px 13px 30px;
     text-transform: uppercase;
@@ -409,25 +408,35 @@ li>a:hover~.description {
 }
 
 .realms {
-    margin: 0 auto;
-    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    /* padding-left: 90px; */
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    background: url("../img/realms.png") no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0px 0px 60px 4px rgb(0, 0, 0);
+    transition: box-shadow .5s linear;
+}
+
+.realms:hover {
+    box-shadow: inset 0px 0px 16px 4px rgb(0, 0, 0);
 }
 
 .realms h3 {
-    margin-top: 8%;
+    margin-top: 300px;
     user-select: none;
     text-transform: uppercase;
     font-family: 'Press Start 2P', cursive;
+    padding-left: 90px;
 }
 
 .realms p {
     margin-top: 25px;
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
-    font-size: 20px;
+    font-size: 16px;
+    padding-left: 90px;
 }
 
 footer {
