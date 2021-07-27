@@ -360,7 +360,8 @@ li>a:hover~.description {
     box-shadow: inset -5px -5px 0px -1px #212121;
 }
 
-.menu_buy {
+
+/* .menu_buy {
     padding: 30px 2%;
     margin: 0 auto;
     display: grid;
@@ -373,29 +374,76 @@ li>a:hover~.description {
     opacity: 0;
     transform: translateY(100vh);
     transition: .5s linear;
+} */
+
+.buy>input:checked~.buy_menu {
+    z-index: 99999;
 }
 
-.buy>input:checked~.menu_buy {
-    opacity: 1;
-    transform: translateY(0);
+.buy_menu {
+    position: fixed;
+    z-index: -5;
+    max-width: max-content;
+    max-height: max-content;
+    background: rgba(255, 255, 255, 0.549);
+    box-shadow: inset -5px -5px 0px -1px #6b6b6b60;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+}
+
+label {
+    min-width: min-content;
+}
+
+.open {
+    width: 316px;
+}
+
+.close {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: .1s linear;
+}
+
+.close:hover {
+    color: red;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.buy_menu>img {
+    width: 100px;
+    height: 250px;
+    border: 1px solid black;
 }
 
 .pc,
 .mobile,
 .console,
 .vr {
+    cursor: pointer;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    color: black;
+    color: #fff;
     margin: 0 auto;
     height: 30vh;
-    width: 100%;
-    background: rgb(225, 225, 225);
+    width: 200px;
+    background: #50ae24;
+    box-shadow: inset -5px -5px 0px -1px #30A521;
     user-select: none;
     text-transform: uppercase;
     font-family: 'Press Start 2P', cursive;
     transition: .2s linear;
-    border-radius: 25px;
 }
 
 .icon,
@@ -409,7 +457,7 @@ li>a:hover~.description {
 .console:hover,
 .vr:hover {
     filter: drop-shadow(0px 0px 20px #50ae24);
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .realms {
