@@ -418,7 +418,7 @@ li>a:hover~.description {
     /* padding-left: 90px; */
     width: 100%;
     height: 100vh;
-    background: url("../img/realms.png") no-repeat center center;
+    background: url("../img/realms_bg.png") no-repeat center right;
     background-size: cover;
     box-shadow: inset 0px 0px 60px 4px rgb(0, 0, 0);
     transition: box-shadow .5s linear;
@@ -428,8 +428,18 @@ li>a:hover~.description {
     box-shadow: inset 0px 0px 16px 4px rgb(0, 0, 0);
 }
 
+.logo_realms {
+    width: 600px;
+    margin: 65px 0 25px 75px;
+    cursor: pointer;
+    transition: .4s linear transform;
+}
+
+.logo_realms:hover {
+    transform: translateY(-4px);
+}
+
 .realms h3 {
-    margin-top: 300px;
     user-select: none;
     text-transform: uppercase;
     font-family: 'Press Start 2P', cursive;
